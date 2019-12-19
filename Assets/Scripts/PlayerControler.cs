@@ -6,8 +6,9 @@ public class PlayerControler : MonoBehaviour
 {
     public int speed = 7, jump = 300;
     public bool isJumping = false;
+    public GameObject bullet;
 
-   
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,16 @@ public class PlayerControler : MonoBehaviour
 
         if (h > 0) GetComponent<SpriteRenderer>().flipX = false;
         if (h < 0) GetComponent<SpriteRenderer>().flipX = true;
+
+        if (Input.GetKeyDown(KeyCode.Keypad1))
+
+        {
+
+            GameObject b = (GameObject)(Instantiate(bullet, transform.position + transform.right * 1.5f, Quaternion.identity));
+
+            b.GetComponent<Rigidbody2D>().AddForce(transform.right * 50);
+
+        }
 
     }
 
