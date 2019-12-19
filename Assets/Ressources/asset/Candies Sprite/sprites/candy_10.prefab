@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 4212958958991022}
   - component: {fileID: 212091011960235996}
   - component: {fileID: 3357547262852052357}
-  - component: {fileID: 3938568128521997784}
   - component: {fileID: 4819490098943070925}
+  - component: {fileID: 4570464111245512713}
+  - component: {fileID: 6996784380479857385}
   m_Layer: 0
   m_Name: candy_10
   m_TagString: Untagged
@@ -103,20 +104,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 6
---- !u!114 &3938568128521997784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1638593097462318}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a88e2e39a1c8b5a43af026cf789437fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 100
-  explosion: {fileID: 0}
 --- !u!61 &4819490098943070925
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -128,7 +115,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -143,3 +130,29 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.8502585, y: 4.1}
   m_EdgeRadius: 0
+--- !u!114 &4570464111245512713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638593097462318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cabd9ea35c84a9a4ea61c2068c38ba52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  isEnemyShot: 0
+--- !u!114 &6996784380479857385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638593097462318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1332627a2b8beb41b445c1ee9d8990c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
