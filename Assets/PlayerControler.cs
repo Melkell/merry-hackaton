@@ -7,13 +7,15 @@ public class PlayerControler : MonoBehaviour
     public int speed = 7, jump = 300;
     public bool isJumping = false;
     public GameObject bullet;
+    public GameObject effect;
     private bool isKeysEnabled  = false;
 
+   
 
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -46,6 +48,11 @@ public class PlayerControler : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             GetComponent<Rigidbody2D>().velocity = Vector2.up * jump * Time.deltaTime;
-        }
-    }
+            //GameObject s = (GameObject)(Instantiate(effect, transform.position - new Vector3(1.4f, 0.2f, 0.0f) + transform.right * 1.5f, Quaternion.identity)); will see later for jump animation
+
+            
+
+    
+
+
 }
