@@ -5,15 +5,14 @@ using UnityEngine;
 public class PlayerControler : MonoBehaviour
 {
     public int speed = 7, jump = 300;
-    public bool isJumping = false;
+    public bool grounded = true;
+    private int jumpCount = 2;
+    private bool canDoubleJump = false;
     public GameObject bullet;
     public GameObject effect;
     private bool isKeysEnabled  = false;
 
     
-
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -48,15 +47,14 @@ public class PlayerControler : MonoBehaviour
     void FixedUpdate()
     {   //sauter
         if (Input.GetButtonDown("Jump"))
-        {
+        {   //saut
+
+
             GetComponent<Rigidbody2D>().velocity = Vector2.up * jump * Time.deltaTime;
+            
+            // animation
             GameObject s = (GameObject)(Instantiate(effect, transform.position - new Vector3(1.4f, -0.3f, 0.0f) + transform.right * 1.5f, Quaternion.identity));
             Destroy(s, 0.25f);
-
-
-
-
-
 
         }
 
