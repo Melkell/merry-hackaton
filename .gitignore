@@ -5,6 +5,10 @@ Temp/
 Obj/
 UnityGenerated/
 /Library/
+Assembly-CSharp.csproj
+merry-hackaton.sln
+.collabignore
+.vs
 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
