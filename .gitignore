@@ -9,7 +9,7 @@ Assembly-CSharp.csproj
 merry-hackaton.sln
 .collabignore
 .vs
-Packages/
+Packages/manifest.json
 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
