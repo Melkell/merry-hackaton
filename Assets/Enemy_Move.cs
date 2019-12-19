@@ -24,4 +24,20 @@ public class Enemy_Move : MonoBehaviour
             transform.localScale = new Vector2(-1, 1);
         }
     }
+
+
+    void OnTriggerEnter2D(Collider2D trig)
+    {
+        if (trig.gameObject.CompareTag("Turn"))
+        {
+            if(MoveRight)
+            {
+                MoveRight = false;
+            }
+            else
+            {
+                MoveRight = true;
+            }
+        }
+    }
 }
