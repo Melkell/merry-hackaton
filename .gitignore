@@ -5,6 +5,12 @@ Temp/
 Obj/
 UnityGenerated/
 /Library/
+ProjectSettings/
+.collabignore
+.vs 
+Logs
+Packages
+
 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #

@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class PlayerControler : MonoBehaviour
 {
-    public int speed = 7, jump = 300;
+    public int speed = 7, jump = 300, nbJump = 2;
+    public int jumps;
     public bool grounded = true;
-    private int jumpCount = 2;
-    private bool canDoubleJump = false;
+    public bool isGrounded = false;
+    private bool isJumping = false;
     public GameObject bullet;
     public GameObject effect;
     private bool isKeysEnabled = false;
@@ -48,14 +49,29 @@ public class PlayerControler : MonoBehaviour
     {   //sauter
         if (Input.GetButtonDown("Jump"))
         {   //saut
+            Jump();
+            
+            
 
+        }
 
-            GetComponent<Rigidbody2D>().velocity = Vector2.up * jump * Time.deltaTime;
+        void Jump()
+        {
+            if (jumps > 0)
+            {
+                // jump
+                Debug.Log("jumps " + jumps + "--- Maxjumps " + nbJump);
+                jumps = jumps - 1;
+                GetComponent<Rigidbody2D>().velocity = Vector2.up * jump * Time.deltaTime;
+                //anim
+                GameObject s = (GameObject)(Instantiate(effect, transform.position - new Vector3(1.4f, -0.3f, 0.0f) + transform.right * 1.5f, Quaternion.identity));
+                Destroy(s, 0.25f);
 
-            // animation
-            GameObject s = (GameObject)(Instantiate(effect, transform.position - new Vector3(1.4f, -0.3f, 0.0f) + transform.right * 1.5f, Quaternion.identity));
-            Destroy(s, 0.25f);
-
+            }
+            if (jumps == 0)
+            {
+                return;
+            }
         }
 
     }
