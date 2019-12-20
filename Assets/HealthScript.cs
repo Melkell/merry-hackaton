@@ -6,6 +6,8 @@ public class HealthScript : MonoBehaviour
 {
     public int hp = 1;
     public bool isEnemy = true;
+    public GameObject Drop;    
+
 
     // Start is called before the first frame update
     void OnTriggerEnter2D(Collider2D collider)
@@ -28,6 +30,7 @@ public class HealthScript : MonoBehaviour
                 {
                     // Destruction !
                     Destroy(gameObject);
+                    Instantiate(Drop, transform.position, transform.rotation);
                 }
             }
         }
